@@ -10,9 +10,8 @@ public class WordCount {
 		Scanner in = new Scanner(System.in);
 		ST<String, Integer> st = new STLinkedList<>();
 		
-		while (true) {
+		while (in.hasNext()) {
 			String str = in.next();
-			if (str.equals("fim")) break;
 			if (!st.contains(str)) st.put(str, 1);
 			else st.put(str, st.get(str) + 1);
 		}
