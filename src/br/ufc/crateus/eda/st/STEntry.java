@@ -7,6 +7,11 @@ public class STEntry<K, V> implements Entry<K, V> {
 	private K key;
 	private V value;
 
+	public STEntry(K key, V value) {
+		this.key = key;
+		this.value = value;
+	}
+
 	@Override
 	public K getKey() {
 		return key;
