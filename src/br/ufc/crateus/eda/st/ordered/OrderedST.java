@@ -2,7 +2,7 @@ package br.ufc.crateus.eda.st.ordered;
 
 import br.ufc.crateus.eda.st.ST;
 
-public interface OrderedST<K, V> extends ST<K, V> {
+public interface OrderedST<K extends Comparable<K>, V> extends ST<K, V> {
 	K min();
 	K max();
 	K floor(K key);
