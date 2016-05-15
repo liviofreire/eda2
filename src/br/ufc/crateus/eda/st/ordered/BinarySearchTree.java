@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedST<K, V> {
 	
-	private Node root;
+	protected Node root;
 	
 	protected class Node {
 		K key;
@@ -88,7 +88,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedST<K
 		return size(root);
 	}
 	
-	private int size(Node node) {
+	protected int size(Node node) {
 		return (node != null)? node.count : 0;
 	}
 
