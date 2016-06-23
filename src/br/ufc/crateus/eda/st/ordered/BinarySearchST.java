@@ -18,8 +18,6 @@ public class BinarySearchST<K extends Comparable<K>, V> implements OrderedST<K, 
 
 	@Override
 	public void put(K key, V value) {
-		
-		
 		if (value != null){
 			int i = rank(key);
 			Entry<K, V> e = list.get(i);

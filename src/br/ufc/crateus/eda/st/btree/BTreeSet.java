@@ -30,8 +30,10 @@ public class BTreeSet<K extends Comparable<K>> {
 	
 	private void add(Page<K> r, K key) {
 		if (r.isExternal()) r.insert(key);
-		Page<K> next = r.next(key);
-		add(next, key);
-		if (next.hasOverflowed()) r.enter(next.split());
+		else {
+			Page<K> next = r.next(key);
+			add(next, key);
+			if (next.hasOverflowed()) r.enter(next.split());
+		}
 	}
 }
